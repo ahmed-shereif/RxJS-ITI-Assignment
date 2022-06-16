@@ -3,6 +3,28 @@
 <h3>products count: </h3>
 <div class="card">
   <div class="card-body">
+
+
+    <div class="container">
+      <div class="row justify-content-between d-flex flex-column">
+        <span>Categories</span>
+        <div class="col-3">
+          <select class="form-control" (change)="onSelectedCategory($event.target.value)">
+            <option value="0">- Display All -</option>
+            <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+          </select>
+        </div>
+        <div class="col-3">
+          <span>Suppliers</span>
+          <select class="form-control" (change)="onSelectedSupplier($event.target.value)">
+            <option value="0">- Display All -</option>
+            <option *ngFor="let supplier of suppliers" [value]="supplier.id">{{ supplier.name }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+
     <div class="table-responsive">
       <table class="table mb-0">
         <thead>
@@ -10,13 +32,14 @@
             <th>Product</th>
             <th>Code</th>
             <th>Category</th>
-            <th>Price</th>
+            <th>Price + 10%</th>
             <th>In Stock</th>
+            <th>supplier</th>
           </tr>
         </thead>
-        <tbody >
+        <tbody>
           <tr>
-           
+
           </tr>
         </tbody>
       </table>
