@@ -38,8 +38,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-
+          <tr *ngFor="let p of products">
+            <td>{{p.productName}}</td>
+            <td>{{p.productCode}}</td>
+            <td>{{p.categoryId}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.quantityInStock}}</td>
+            <td>{{p.supplierId}}</td>
           </tr>
         </tbody>
       </table>
